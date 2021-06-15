@@ -5,13 +5,13 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
-    // Variable for player movement - left to right
+    // Player movement (Horizontal)
     public float horizontalInput;
 
-    // Movement Speed
+    // Player movement speed
     public float movementSpeed = 100.0f;
 
-    // A variable for a value range that can be negative or positive!
+    // Value range that can be negative or positive!
     public float xRange = 10.0f;
 
     // GameObject to hold a prefab
@@ -36,6 +36,13 @@ public class PlayerController : MonoBehaviour
         if (transform.position.x > xRange)
         {
             transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
+        }
+
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            // Press space bar to fire projectile from the player
+            // Debug.Log("Space bar pressed!");
+            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
         }
 
         // Player Movement

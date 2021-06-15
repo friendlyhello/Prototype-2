@@ -6,7 +6,7 @@ public class MoveForward : MonoBehaviour
 {
 
     // Forward Projectile Speed
-    public float projectileSpeed = 10.0f;
+    public float movementSpeed = 10.0f;
 
 
     // Start is called before the first frame update
@@ -19,6 +19,6 @@ public class MoveForward : MonoBehaviour
     void Update()
     {
         // Projectile
-        transform.Translate(Vector3.forward * Time.deltaTime * projectileSpeed);
+        transform.Translate(Vector3.forward * Time.deltaTime * movementSpeed);
     }
 }
