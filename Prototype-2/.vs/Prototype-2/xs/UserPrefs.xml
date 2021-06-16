@@ -1,8 +1,10 @@
 ﻿<Properties StartupConfiguration="{9F7DA9BA-5C41-085C-71E8-9689E07EE33A}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MoveForward.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SpawnManager.cs">
     <Files>
-      <File FileName="Assets/Scripts/PlayerController.cs" Line="20" Column="9" />
-      <File FileName="Assets/Scripts/MoveForward.cs" Line="8" Column="8" />
+      <File FileName="Assets/Scripts/PlayerController.cs" Line="43" Column="66" />
+      <File FileName="Assets/Scripts/MoveForward.cs" Line="9" Column="40" />
+      <File FileName="Assets/Scripts/DestroyOutOfBounds.cs" Line="25" Column="14" />
+      <File FileName="Assets/Scripts/SpawnManager.cs" Line="5" Column="42" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
