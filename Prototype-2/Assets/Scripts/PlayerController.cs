@@ -27,13 +27,13 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         // Set a new negative x position with -xRange so Player does not move past that new position
-        if (transform.position.x < -xRange)
+        if (transform.position.x < -xRange) // -xRange = -10.0f
         {
             transform.position = new Vector3(-xRange, transform.position.y, transform.position.z);
         }
 
         // Set a new positive x position with xRange so Player does not move past that new position
-        if (transform.position.x > xRange)
+        if (transform.position.x > xRange) // xRange = 10.0f
         {
             transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
         }
