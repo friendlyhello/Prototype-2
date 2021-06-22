@@ -5,8 +5,9 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
-    // Player movement (Horizontal)
+    // Player movement
     public float horizontalInput;
+    public float verticalInput;
 
     // Player movement speed
     public float movementSpeed = 100.0f;
@@ -47,9 +48,11 @@ public class PlayerController : MonoBehaviour
 
         // Player Movement
         horizontalInput = Input.GetAxis("Horizontal");
+        verticalInput = Input.GetAxis("Vertical");
 
         // (!)  Multiply horizontalInput to calculate whether the movement goes in
         //      the positive or negative right direction
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * movementSpeed);
+        transform.Translate(Vector3.forward * verticalInput * Time.deltaTime * movementSpeed);
     }
 }
