@@ -7,6 +7,7 @@ public class DestroyOutOfBounds : MonoBehaviour
     // Define the top and lower bounds of the gameplay space
     private int topBounds = 30;
     private int lowerBounds = -10;
+    private float sideBound = 30;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,18 @@ public class DestroyOutOfBounds : MonoBehaviour
         }
 
         else if (transform.position.z < lowerBounds)
+        {
+            Debug.Log("Game Over!");
+            Destroy(gameObject);
+        }
+
+        else if (transform.position.x > sideBound)
+        {
+            Debug.Log("Game Over!");
+            Destroy(gameObject);
+        }
+
+        else if (transform.position.x < -sideBound)
         {
             Debug.Log("Game Over!");
             Destroy(gameObject);

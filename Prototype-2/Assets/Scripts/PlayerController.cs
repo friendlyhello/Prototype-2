@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
     // GameObject to hold a prefab
     public GameObject projectilePrefab;
 
+    public Transform projectileSpawnPoint;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,7 +45,7 @@ public class PlayerController : MonoBehaviour
         {
             // Press space bar to fire projectile from the player
             // Debug.Log("Space bar pressed!");
-            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+            Instantiate(projectilePrefab, projectileSpawnPoint.position, projectilePrefab.transform.rotation);
         }
 
         // Player Movement
