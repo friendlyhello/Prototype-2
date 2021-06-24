@@ -9,10 +9,14 @@ public class DestroyOutOfBounds : MonoBehaviour
     private int lowerBounds = -10;
     private float sideBound = 30;
 
+    // Access GameManager
+    public GameManager gameManager;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        // Reference to Game Manager
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -25,19 +29,19 @@ public class DestroyOutOfBounds : MonoBehaviour
 
         else if (transform.position.z < lowerBounds)
         {
-            Debug.Log("Game Over!");
+            gameManager.AddLives(-1);
             Destroy(gameObject);
         }
 
         else if (transform.position.x > sideBound)
         {
-            Debug.Log("Game Over!");
+            gameManager.AddLives(-1);
             Destroy(gameObject);
         }
 
         else if (transform.position.x < -sideBound)
         {
-            Debug.Log("Game Over!");
+            gameManager.AddLives(-1);
             Destroy(gameObject);
         }
     }
